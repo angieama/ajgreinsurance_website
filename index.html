@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AJG Reinsurance Brokers Ltd | Expert Reinsurance Solutions</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0f2b5b;
+      --primary-dark: #081d40;
+      --accent: #c9973e;
+      --light: #f8f9fc;
+      --gray: #6b7280;
+      --dark: #1f2937;
+      --border: #e5e7eb;
+    }
+   
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+    }
+    
+    html {
+      scroll-padding-top: 100px;
+    }
+    
+    body { 
+      font-family:'Inter',system-ui,sans-serif; 
+      color:var(--dark); 
+      background:white; 
+      line-height:1.6; 
+    }
+    
+    h1,h2,h3 { 
+      font-family:'Playfair Display',serif; 
+      font-weight:700; 
+      color:var(--primary); 
+    }
+    
+    .container { 
+      width:min(92%,1280px); 
+      margin:0 auto; 
+    }
+    
+    header {
+      background:white; 
+      box-shadow:0 2px 15px rgba(0,0,0,0.07); 
+      position:sticky; 
+      top:0; 
+      z-index:1000; 
+      padding:1.1rem 0;
+    }
+    
+    nav { 
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center; 
+    }
+    
+    .logo { 
+      font-size:1.9rem; 
+      font-weight:700; 
+      color:var(--primary); 
+      letter-spacing:-0.5px; 
+    }
+    
+    .logo span { 
+      color:var(--accent); 
+    }
+    
+    .nav-links { 
+      display:flex; 
+      gap:2.4rem; 
+      font-weight:500; 
+      align-items:center; 
+    }
+    
+    .nav-links a, 
+    .nav-links .dropbtn { 
+      color:var(--dark); 
+      text-decoration:none; 
+      transition:color 0.25s; 
+      background:transparent; 
+      border:none; 
+      font:inherit; 
+      cursor:pointer; 
+    }
+    
+    .nav-links a:hover, 
+    .nav-links .dropbtn:hover { 
+      color:var(--primary); 
+    }
+    
+    .nav-links .dropdown { 
+      position:relative; 
+    }
+    
+    .nav-links .dropdown-content {
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      background:white;
+      box-shadow:0 6px 20px rgba(0,0,0,0.15);
+      border-radius:8px;
+      padding:0.5rem 0;
+      flex-direction:column;
+      min-width:200px;
+      z-index:1001;
+    }
+    
+    .nav-links .dropdown-content a {
+      display:block;
+      padding:0.55rem 0.95rem;
+      white-space:nowrap;
+      color:var(--dark);
+      text-decoration:none;
+      font-weight:500;
+    }
+    
+    .nav-links .dropdown-content a:hover { 
+      background:var(--light); 
+      color:var(--primary); 
+    }
+    
+    .nav-links .dropdown:hover .dropdown-content { 
+      display:flex; 
+    }
+    
+    .nav-links .dropdown-content.active {
+      display:flex;
+    }
+    
+    .nav-links .dropdown .dropbtn::after { 
+      content:' ▾'; 
+      font-size:0.8rem; 
+      margin-left:0.15rem; 
+    }
+    
+    .hamburger { 
+      display:none; 
+      flex-direction:column; 
+      cursor:pointer; 
+      gap:4px; 
+    }
+    
+    .hamburger span { 
+      width:25px; 
+      height:3px; 
+      background:var(--dark); 
+      transition:0.3s; 
+    }
+    
+    .hamburger.active span:nth-child(1) { 
+      transform:rotate(45deg) translate(5px,5px); 
+    }
+    .hamburger.active span:nth-child(2) { 
+      opacity:0; 
+    }
+    .hamburger.active span:nth-child(3) { 
+      transform:rotate(-45deg) translate(7px,-6px); 
+    }
+    
+    .btn {
+      background:var(--primary); 
+      color:white; 
+      padding:0.65rem 1.5rem; 
+      border-radius:6px; 
+      text-decoration:none; 
+      font-weight:500; 
+      transition:all 0.25s;
+    }
+    
+    .btn:hover { 
+      background:var(--primary-dark); 
+      transform:translateY(-1px); 
+    }
+    
+    .hero {
+      position: relative;
+      color: white;
+      padding: 9rem 0 7rem;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(8,29,64,0.88) 0%, rgba(15,43,91,0.78) 100%);
+    }
+    
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 { 
+      font-size: clamp(2.8rem,6vw,4.5rem); 
+      color: white; 
+      margin-bottom: 1.3rem; 
+      line-height: 1.15; 
+      font-weight: 700;
+    }
+    
+    .hero p { 
+      font-size: 1.35rem; 
+      max-width: 680px; 
+      margin: 0 auto 2.5rem; 
+      opacity: 0.95; 
+    }
+    
+    .hero-buttons { 
+      display:flex; 
+      gap:1.5rem; 
+      justify-content:center; 
+      flex-wrap:wrap; 
+    }
+    
+    .btn-outline { 
+      background:transparent; 
+      border:2px solid white; 
+      color:white; 
+    }
+    
+    .btn-outline:hover { 
+      background:rgba(255,255,255,0.1); 
+    }
+    
+    section { 
+      padding:6rem 0; 
+    }
+    
+    h2 { 
+      font-size:2.6rem; 
+      text-align:center; 
+      margin-bottom:3.5rem; 
+      position:relative; 
+    }
+    
+    h2::after {
+      content:''; 
+      width:70px; 
+      height:4px; 
+      background:var(--accent); 
+      position:absolute; 
+      bottom:-14px; 
+      left:50%; 
+      transform:translateX(-50%); 
+      border-radius:2px; 
+    }
+    
+    .section-head { 
+      text-align:center; 
+      margin-bottom:3.5rem; 
+    }
+    
+    .section-head h2 { 
+      font-size:clamp(2rem,3.5vw,2.8rem); 
+      font-weight:600; 
+      position:relative; 
+      display:inline-block; 
+    }
+    .section-head h3 { 
+      color: #ffffff;
+    }
+    
+    .section-head h2::after { 
+      content:''; 
+      width:70px; 
+      height:4px; 
+      background:var(--accent); 
+      position:absolute; 
+      bottom:-14px; 
+      left:50%; 
+      transform:translateX(-50%); 
+      border-radius:2px; 
+    }
+    
+    .section-head p { 
+      max-width:750px; 
+      margin:1.2rem auto 0; 
+      color:var(--gray); 
+      font-size:1.05rem; 
+      line-height:1.75; 
+    }
+   
+    /* ── STATS / TRUST BAR ── */
+    #stats {
+      background:var(--primary); padding:0;
+    }
+    .stats-bar {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid rgba(255,255,255,0.1);
+    }
+    .stat-item {
+      padding:2.2rem 1.5rem; text-align:center;
+      border-right:1px solid rgba(255,255,255,0.1);
+      transition:background 0.25s;
+    }
+    .stat-item:last-child { border-right:none; }
+    .stat-item:hover { background:rgba(255,255,255,0.05); }
+    .stat-number {
+      font-family:'Cormorant Garamond',serif;
+      font-size:2.6rem; font-weight:700; color:var(--accent);
+      line-height:1; display:block; margin-bottom:0.4rem;
+    }
+    .stat-label { font-size:0.85rem; color:rgba(255,255,255,0.75); letter-spacing:0.4px; font-weight:500; }
+
+    /* ── WHY CHOOSE US / SERVICES / SOLUTIONS ── */
+    #why, #services, #solutions, #data-modelling { 
+      background:var(--light); 
+      color: white;
+    }
+    
+    .why-grid, 
+    .services-grid,
+    .cards-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:2.5rem;
+      margin-top:2rem;
+    }
+    
+    .service-card, .why-card {
+      background:white;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:2.5rem 2rem;
+      text-align:center;
+      box-shadow:0 10px 22px rgba(11,24,45,0.09);
+      transition:all 0.3s;
+      position:relative;
+    }
+    
+    .service-card:hover, .why-card:hover { 
+      transform:translateY(-8px); 
+      box-shadow:0 18px 40px rgba(11,24,45,0.15); 
+    }
+    
+    .service-header, .why-icon {
+      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+      color:white;
+      width:80px;
+      height:80px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.8rem;
+      margin:0 auto 1.5rem;
+      box-shadow:0 8px 20px rgba(15,43,91,0.3);
+    }
+    
+    .service-header h3, .why-card h3 {
+      margin:0 0 1rem 0;
+      color:var(--primary);
+      font-size:1.4rem;
+      font-weight:700;
+    }
+    
+    .service-content, .why-card p {
+      color:#334155;
+      line-height:1.65;
+      font-size:1.04rem;
+    }
+    
+    .service-content ul {
+      margin-top:1rem;
+      padding-left:1.4rem;
+      list-style-type:disc;
+      text-align:left;
+    }
+    
+    .service-content ul li {
+      margin-bottom:0.6rem;
+    }
+    .cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+#solutions .card:hover,
+#data-modelling .card:hover {
+  transform: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-header i {
+  font-size: 2rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #ffffff;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-body p {
+  line-height: 1.65;
+  color: #555;
+}
+
+.short-text {
+  font-weight: 500;
+  color: #333;
+}
+
+    .read-more {
+      color: var(--primary);
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    
+    .full-text {
+      display: none;
+      margin-top: 1.5rem;
+      color: #ffffff;
+      line-height: 1.7;
+    }
+    
+    .full-text p, .full-text ul {
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── TESTIMONIALS / PARTNERS ── */
+    #testimonials { background:white; }
+    .testimonials-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.8rem;
+      margin-bottom:4rem;
+    }
+    .testimonial-card {
+      background:var(--light); border-radius:12px; padding:2rem;
+      border:1px solid var(--border); position:relative; transition:all 0.3s;
+    }
+    .testimonial-card:hover { box-shadow:0 16px 36px rgba(15,43,91,0.08); transform:translateY(-4px); }
+    .testimonial-card::before {
+      content:'\201C'; font-family:'Cormorant Garamond',serif;
+      font-size:5rem; color:var(--accent); opacity:0.3;
+      position:absolute; top:0.5rem; left:1.2rem; line-height:1;
+    }
+    .testimonial-text { font-size:1rem; color:var(--dark); line-height:1.8; margin-bottom:1.5rem; padding-top:1.5rem; font-style:italic; }
+    .testimonial-author { display:flex; align-items:center; gap:0.9rem; }
+    .author-avatar {
+      width:44px; height:44px; border-radius:50%;
+      background:var(--primary); display:flex; align-items:center; justify-content:center;
+      font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:white; font-weight:700; flex-shrink:0;
+    }
+    .author-name { font-weight:600; font-size:0.95rem; color:var(--primary); }
+    .author-role { font-size:0.85rem; color:var(--gray); }
+
+    /* Partners logos row */
+    .partners-label {
+      text-align:center; font-size:0.82rem; text-transform:uppercase;
+      letter-spacing:1px; color:var(--gray); font-weight:600; margin-bottom:1.8rem;
+    }
+    .partners-row {
+      display:flex; flex-wrap:wrap; gap:1rem;
+      align-items:center; justify-content:center;
+    }
+    .partner-badge {
+      padding:0.7rem 1.6rem; border:1.5px solid var(--border); border-radius:8px;
+      font-weight:700; font-size:0.88rem; color:var(--primary);
+      font-family:'Cormorant Garamond',serif; font-size:1rem;
+      letter-spacing:0.3px; transition:all 0.25s; background:white;
+    }
+    .partner-badge:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-2px); box-shadow:0 6px 16px rgba(15,43,91,0.08); }
+
+    /* About & Team */
+    #about { 
+      background:var(--light); 
+    }
+    
+    .about-content { 
+      max-width:900px; 
+      margin:0 auto 4rem; 
+      text-align:center; 
+    }
+    
+    .about-content p { 
+      font-size:1.1rem; 
+      margin-bottom:1.5rem; 
+    }
+    
+    .team-grid { 
+      display:grid; 
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); 
+      gap:2.5rem; 
+    }
+    
+    .team-card {
+      background:white; 
+      border-radius:12px; 
+      overflow:hidden; 
+      box-shadow:0 6px 20px rgba(0,0,0,0.08); 
+      transition:all 0.3s;
+      text-align:center;
+    }
+    
+    .team-card:hover { 
+      transform:translateY(-8px); 
+      box-shadow:0 16px 40px rgba(0,0,0,0.12); 
+    }
+    
+    .team-img {
+      width:160px; 
+      height:160px; 
+      border-radius:50%; 
+      object-fit:cover; 
+      margin:2rem auto 1.2rem; 
+      border:4px solid var(--primary); 
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .team-header h3 { 
+      margin-bottom:0.4rem; 
+      font-size:1.45rem; 
+    }
+    
+    .team-header .title { 
+      font-weight:600; 
+      color:var(--primary); 
+      margin-bottom:1rem; 
+    }
+    
+    .team-bio { 
+      padding:0 1.5rem 2rem; 
+      font-size:1.02rem; 
+      color:var(--gray); 
+    }
+    
+    .short-bio { 
+      display:block; 
+    }
+    
+    .full-bio { 
+      display:none; 
+      margin-top:1rem; 
+    }
+    
+    .read-more, .read-less-link { 
+      color:var(--primary); 
+      font-weight:600; 
+      cursor:pointer; 
+      text-decoration:underline; 
+    }
+    
+    .read-more:hover, .read-less-link:hover { 
+      color:var(--primary-dark); 
+    }
+
+    /* Contact Form */
+    #contact-form { 
+      max-width:700px; 
+      margin:0 auto; 
+      background:white; 
+      padding:2.8rem; 
+      border-radius:12px; 
+      box-shadow:0 6px 24px rgba(0,0,0,0.1); 
+    }
+    
+    form label { 
+      display:block; 
+      margin-bottom:0.5rem; 
+      font-weight:600; 
+      color:var(--primary); 
+    }
+    
+    form input, form textarea {
+      width:100%; 
+      padding:0.95rem; 
+      margin-bottom:1.3rem; 
+      border:1px solid #d1d5db; 
+      border-radius:6px; 
+      font-size:1rem;
+    }
+    
+    form textarea { 
+      min-height:150px; 
+      resize:vertical; 
+    }
+    
+    form button { 
+      background:var(--primary); 
+      color:white; 
+      padding:1.1rem 2.2rem; 
+      border:none; 
+      border-radius:6px; 
+      font-size:1.1rem; 
+      cursor:pointer; 
+      transition:all 0.25s; 
+      width: 100%;
+    }
+    
+    form button:hover { 
+      background:var(--primary-dark); 
+      transform:translateY(-2px); 
+    }
+
+    /* Scroll to Top */
+    #scrollToTop {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 18px rgba(15, 43, 91, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: all 0.3s ease;
+      z-index: 1100;
+      font-size: 1.3rem;
+    }
+    
+    #scrollToTop.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer { background:var(--primary-dark); color:#94a3b8; padding:5rem 0 0; }
+    .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr; gap:3rem; margin-bottom:3.5rem; }
+    .footer-brand .logo-footer { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:700; color:white; margin-bottom:1rem; display:block; }
+    .footer-brand .logo-footer span { color:var(--accent); }
+    .footer-brand p { font-size:0.92rem; line-height:1.75; max-width:280px; color:#94a3b8; }
+    .footer-mission { margin-top:1.2rem; padding:1rem 1.2rem; border-left:3px solid var(--accent); font-style:italic; font-size:0.9rem; color:#cbd5e1; line-height:1.7; }
+    .reg-badge { font-size:0.85rem; color:#94a3b8; margin-top:1rem; }
+    .reg-badge i { color:var(--accent); margin-right:0.5rem; }
+    .footer-col h4 { color:white; font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:1.2rem; }
+    .footer-col p { font-size:0.9rem; line-height:1.75; }
+    .footer-col a { color:#94a3b8; text-decoration:none; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--accent); }
+    .social-icons { display:flex; gap:0.8rem; margin-top:1rem; }
+    .social-icon { width:38px; height:38px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:0.95rem; text-decoration:none; transition:all 0.25s; }
+    .social-icon:hover { background:var(--accent); border-color:var(--accent); color:white; transform:translateY(-2px); }
+    .footer-divider { border:none; border-top:1px solid rgba(255,255,255,0.08); margin:0; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding:1.5rem 0; flex-wrap:wrap; gap:0.8rem; }
+    .footer-bottom p { font-size:0.85rem; }
+    .copyright { text-align:center; padding-top:2rem; border-top:1px solid #334155; font-size:0.95rem; }
+    
+
+    /* Responsive */
+    @media (max-width:1024px) {
+      .stats-bar { 
+        grid-template-columns:repeat(2,1fr); 
+      }
+      .stat-item { 
+        border-right:none; 
+        border-bottom:1px solid rgba(255,255,255,0.1); 
+      }
+      .stat-item:nth-child(2n) { 
+        border-bottom:none; 
+      }
+      .team-grid { 
+        grid-template-columns:repeat(2,1fr); 
+      }
+    }
+    
+    @media (max-width:768px) {
+      .nav-links { 
+        display:none; 
+        position:absolute; 
+        top:100%; 
+        left:0; 
+        right:0; 
+        background:white; 
+        flex-direction:column; 
+        padding:1.5rem 1rem; 
+        box-shadow:0 4px 15px rgba(0,0,0,0.1); 
+        z-index:1001; 
+      }
+      
+      .nav-links.active { 
+        display:flex; 
+      }
+      
+      .hamburger { 
+        display:flex; 
+      }
+      
+      .btn { 
+        display:none; 
+      }
+      
+      .hero { 
+        padding:6.5rem 0 5rem; 
+      }
+      
+      .hero h1 { 
+        font-size:2.7rem; 
+      }
+      
+      .stats-bar { 
+        grid-template-columns:1fr; 
+      }
+      
+      .team-grid { 
+        grid-template-columns:1fr; 
+      }
+      
+      .services-grid, 
+      .cards-grid, 
+      .why-grid { 
+        grid-template-columns:1fr; 
+      }
+      
+      .footer-top { 
+        grid-template-columns:1fr; 
+        gap:2.5rem; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">AJG <span>Re</span></div>
+        
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          
+          <div class="dropdown">
+            <a href="#solutions" class="dropbtn">Solutions</a>
+            <div class="dropdown-content">
+              <a href="#keyman-insurance">Keyman Insurance</a>
+              <a href="#political-risks">Political Risks</a>
+              <a href="#trade-credit-risks">Trade Credit & Investment Risks</a>
+              <a href="#energy-construction-risks">Energy and Construction Risks</a>
+              <a href="#oil-gas-risks">Oil and Gas Risks</a>
+              <a href="#marine-aviation-risks">Marine and Aviation Risks</a>
+              <a href="#energy-mining-risks">Energy and Mining Risks</a>
+              <a href="#delegated-authority">Delegated Authority Underwriting</a>
+              <a href="#climate-risk">Climate Risk Insurance</a>
+              <a href="#parametric-agricultural">Parametric Agricultural Solutions</a>
+              <a href="#specialty-risk">Specialty Risk Placement</a>
+            </div>
+          </div>
+          
+          <div class="dropdown">
+            <a href="#data-modelling" class="dropbtn">Data &amp; Modelling</a>
+            <div class="dropdown-content">
+              <a href="#cat-modeling">CAT Modeling</a>
+              <a href="#rorac">Return on Risk Adjusted Capital (RORAC)</a>
+              <a href="#ifrs-preparedness">IFRS Preparedness</a>
+              <a href="#reinsurance-data-analytics">Reinsurance Data Analytics</a>
+              <a href="#additional-reinsurers-info">Additional Reinsurers Information & Challenges</a>
+            </div>
+          </div>
+          
+          <div class="dropdown">
+            <a href="#about" class="dropbtn">About</a>
+            <div class="dropdown-content">
+              <a href="#about">About Us</a>
+              <a href="#why-us">Why Us</a>
+              <a href="#team">Our Team</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <a href="#contact" class="btn">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="hero.jpg" alt="AJG Reinsurance Brokers" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <h1>Reinsurance Solutions Built on Expertise &amp; Trust</h1>
+      <p>AJG Reinsurance Brokers — delivering tailored treaty, facultative and specialty reinsurance placements across Africa and beyond.</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn">About Us</a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Years Combined Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Pan‑Africa</span>
+          <span class="stat-label">Regional Coverage</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">6</span>
+          <span class="stat-label">Specialist Practice Areas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">IRA</span>
+          <span class="stat-label">Regulated &amp; Licensed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Reinsurance &amp; Risk Management Services</h2>
+      <p style="text-align:center; max-width:800px; margin:0 auto 3rem; color:var(--gray); font-size:1.15rem;">
+        Expert, tailored solutions to help insurers and reinsurers navigate complex risks, optimize capital, and achieve sustainable growth.
+      </p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-header"><i class="fas fa-shield-alt"></i></div>
+          <h3>Risk Consulting</h3>
+          <div class="service-content">
+            <p>The use of insurance to manage risk is a necessity that cushions you against uncertainties in life. A comprehensive risk and insurance strategy ensures you are ready to face the challenges that arise as a result of an adverse event taking place.</p>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header"><i class="fas fa-chart-line"></i></div>
+          <h3>Reinsurance Treaty Optimization</h3>
+          <div class="service-content">
+            <p>At AJG Reinsurance, we transform raw data into actionable insights, crafting tailor-made strategies that align with the evolving insurance and reinsurance landscape.</p>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header"><i class="fas fa-file-contract"></i></div>
+          <h3>Treaty Administration</h3>
+          <div class="service-content">
+            <p>A fundamental aspect of the industry, treaty administration involves managing policies and claims between insurers and reinsurers with precision and deep insight.</p>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header"><i class="fas fa-hand-holding-usd"></i></div>
+          <h3>Claims Management</h3>
+          <div class="service-content">
+            <p>Claims analysis and reporting are essential in reinsurance. We systematically examine claims data to identify trends and support efficient claim handling.</p>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header"><i class="fas fa-exchange-alt"></i></div>
+          <h3>Conventional Facultative Placement</h3>
+          <div class="service-content">
+            <p>Facultative reinsurance delivers customized solutions for risks exceeding treaty limits with credible, IRA-compliant securities.</p>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header"><i class="fas fa-globe-africa"></i></div>
+          <h3>Alternative Risk Transfer (ART)</h3>
+          <div class="service-content">
+            <p>In challenging markets, we help explore ART solutions beyond traditional insurance to address key risk management challenges.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALIZED SOLUTIONS -->
+  <section id="solutions" style="background:var(--light);">
+  <div class="container">
+    <h2>Specialized Reinsurance Solutions</h2>
+    <p style="text-align:center; max-width:900px; margin:0 auto 3rem; color:var(--gray); font-size:1.15rem;">
+      Tailored reinsurance and risk transfer solutions for complex, emerging, and high-exposure risks across industries and geographies.
+    </p>
+
+    <div class="cards-grid">
+
+      <!-- 1. Keyman Insurance -->
+      <div class="card" id="keyman-insurance">
+        <div class="card-header">
+          <i class="fas fa-user-tie"></i>
+          <h3>Keyman Insurance</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Key person insurance is a life insurance policy that a company purchases on the life of an owner, a top executive, or another individual considered critical to the business.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>The company is the beneficiary of the policy and pays the premiums. This type of life insurance is also known as "key man (or "keyman") insurance," "key woman insurance," and "business life insurance."</p>
+            <p>Key person insurance offers a financial cushion if the sudden loss of a certain individual would profoundly negatively affect the company's operations. The death benefit essentially buys the company time to find a new person or to implement other strategies to save (or shut down) the business.</p>
+            <p>In a small business, the key person is usually the owner, the founders, or perhaps a key employee or two. The main qualifying point is whether the person's absence would cause major financial harm to the company. If this is the case, key person insurance is worth considering.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Political Risks -->
+      <div class="card" id="political-risks">
+        <div class="card-header">
+          <i class="fas fa-landmark"></i>
+          <h3>Political Risks</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Political risk insurance protects businesses, investors, and lenders against losses due to political risks in foreign countries such as expropriation, political violence, and currency inconvertibility.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Political risk insurance is a type of insurance designed to protect businesses, investors, and lenders against losses due to political risks in foreign countries. Political risks can include events such as government expropriation of assets, political violence, currency inconvertibility, contract repudiation, and other political events that can disrupt business operations or result in financial losses.</p>
+            <p><strong>Coverage:</strong> Typically covers losses resulting from specified political events beyond the control of the insured party, including expropriation, political violence, currency inconvertibility, breach of contract by a government entity, and more.</p>
+            <p><strong>Benefits:</strong> Provides financial protection in politically unstable or high-risk countries, helping mitigate risks associated with investing or doing business in these regions.</p>
+            <p><strong>Types of Policies:</strong> Can be tailored for single projects or multiple investments, covering equity, loans, trade transactions, or whole portfolios.</p>
+            <p><strong>Insurers:</strong> Offered by specialized insurers, government agencies, or multilateral institutions such as MIGA (World Bank) or OPIC.</p>
+            <p><strong>Importance:</strong> Crucial for operations in regions with political instability, regulatory uncertainty, or weak rule of law.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Trade Credit & Investment Risks -->
+      <div class="card" id="trade-credit-risks">
+        <div class="card-header">
+          <i class="fas fa-handshake"></i>
+          <h3>Trade Credit & Investment Risks</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Trade credit insurance protects businesses from the risk of non-payment by customers due to insolvency or protracted default.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Trade credit insurance, also known as credit insurance or export credit insurance, protects businesses from the risk of non-payment by their customers.</p>
+            <p><strong>Coverage:</strong> Protects accounts receivable against non-payment due to buyer insolvency or protracted default. Typically covers a percentage of the insured amount.</p>
+            <p><strong>Benefits:</strong> Helps manage non-payment risk, protects cash flow, and can enable better financing terms as insured receivables serve as collateral.</p>
+            <p><strong>Cost:</strong> Depends on buyer creditworthiness, industry, country, and coverage limits.</p>
+            <p><strong>Claims Process:</strong> File claim with evidence of default; insurer investigates and compensates if approved.</p>
+            <p>Valuable for domestic and international trade to ensure operational stability.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Energy and Construction Risks -->
+      <div class="card" id="energy-construction-risks">
+        <div class="card-header">
+          <i class="fas fa-oil-can"></i>
+          <h3>Energy and Construction Risks</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Specialized coverage for energy sector exposures (machinery, business interruption, offshore damage) and construction project risks (liability, workers’ comp, builder’s risk, tools & equipment).</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p><strong>Energy Insurance:</strong> Protects energy companies against machinery repair, income loss due to business interruption, offshore physical damage, and related professional liability exposures.</p>
+            <p><strong>Construction Risks:</strong> Protects construction companies, contractors, and property owners from lawsuits, property loss, and liabilities. Often requires multiple tailored policies.</p>
+            <p><strong>Key Types of Construction Insurance:</strong></p>
+            <ul>
+              <li><strong>General liability:</strong> Covers third-party property damage, bodily injury, advertising injuries, and completed operations.</li>
+              <li><strong>Workers’ compensation:</strong> Covers medical expenses and lost wages for job-related injuries (mandatory with employees).</li>
+              <li><strong>Commercial motor:</strong> Covers accidents involving company vehicles (trucks, etc.).</li>
+              <li><strong>Builder’s risk:</strong> Covers damage to structures under construction (fire, weather, vandalism).</li>
+              <li><strong>Contractor’s tools & equipment:</strong> Covers loss, theft, or damage to tools and equipment.</li>
+              <li><strong>Professional liability (E&O):</strong> Protects against lawsuits over work quality or subcontractor performance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Oil and Gas Risks -->
+      <div class="card" id="oil-gas-risks">
+        <div class="card-header">
+          <i class="fas fa-gas-pump"></i>
+          <h3>Oil and Gas Risks</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Specialized property, inland marine, and liability coverage for oil & gas operations including rigs, drilling equipment, pollution incidents, and third-party claims.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Businesses in the oil and gas industry typically need a combination of specialized property, inland marine, and commercial general liability coverages tailored to unique operational risks.</p>
+            <p>A property or inland marine policy can cover damage to buildings, rigs, drilling equipment, storage tanks, and more.</p>
+            <p>Commercial general liability provides coverage for bodily injury, property damage, and personal/advertising harm to third parties, including pollution-related incidents (sudden & accidental) and limited pollution cleanup costs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Marine and Aviation Risks -->
+      <div class="card" id="marine-aviation-risks">
+        <div class="card-header">
+          <i class="fas fa-plane"></i>
+          <h3>Marine and Aviation Risks</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Coverage for watercraft, aircraft, cargo, terminals, hangars, and related liabilities including marine cargo/transit and aerospace product liability.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p><strong>Marine Insurance:</strong> Covers boats, yachts, ships, cargo, terminals, and onshore/offshore property. Excludes willful misconduct, ordinary leakage, wear and tear, inherent vice, and delay-related losses.</p>
+            <p><strong>Aviation Insurance:</strong> Property and liability coverage for aircraft, hangars, and aerospace product manufacturers. Excludes intentional acts, criminal activities, wear and tear, or mechanical breakdown.</p>
+            <p><strong>Marine Cargo and Transit Insurance:</strong> Protects goods in transit (sea or air) against theft, damage, and other threats under Goods in Transit (GIT) policies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Energy and Mining Risks -->
+      <div class="card" id="energy-mining-risks">
+        <div class="card-header">
+          <i class="fas fa-hard-hat"></i>
+          <h3>Energy and Mining Risks</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Comprehensive risk management for energy and mining operations including business interruption, contract works, down hole coverage, liability, and performance bonds.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Energy and mining operations face increasing challenges and exposures due to demand growth and evolving conditions. Risk identification and emergency preparedness are critical.</p>
+            <p><strong>Coverage scope includes:</strong></p>
+            <ul style="color: black;">
+              <li>Abandonment</li>
+              <li>Advance payment bonds</li>
+              <li>Business interruption</li>
+              <li>Contract works</li>
+              <li>Delayed start-up covers</li>
+              <li>Down hole coverage</li>
+              <li>Employers Liability</li>
+              <li>Expat insurance programmes</li>
+              <li>General third-party liability</li>
+              <li>Performance bonds</li>
+              <li>Reinstatement bonds</li>
+              <li>Subsidence liabilities</li>
+              <li>Underground and surface machinery</li>
+              <li>Worker to worker liabilities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Delegated Authority Underwriting -->
+      <div class="card" id="delegated-authority">
+        <div class="card-header">
+          <i class="fas fa-file-signature"></i>
+          <h3>Delegated Authority Underwriting</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Contractual arrangement where an insurer delegates underwriting, claims handling, or other functions to another party under a delegated authority relationship.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Delegated authority is an insurance industry term referring to the outsourcing of certain functions. It is a contractual arrangement under which one party authorizes another party to act on their behalf.</p>
+            <p>For example, an insurance company may delegate underwriting or claims handling to another party. These two parties then have a "delegated authority relationship."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Climate Risk Insurance -->
+      <div class="card" id="climate-risk">
+        <div class="card-header">
+          <i class="fas fa-cloud-sun-rain"></i>
+          <h3>Climate Risk Insurance</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Financial risk transfer instruments protecting against losses from extreme weather events intensified by climate change.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Climate risk insurance describes a suite of instruments for financial risk transfer that protects against risks arising from extreme weather events that are increasing in frequency and intensity because of climate change.</p>
+            <p>It offers protection to regional entities, governments, institutions, companies, community groups, households, and individuals against loss of life, livelihood, or assets caused by extreme weather events. It ensures effective and rapid post-disaster payments.</p>
+            <p>While hazards are directly determined by climate change, vulnerability and exposure depend on socio-economic factors. Effective planning requires understanding these elements through climate risk assessment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Parametric Agricultural Solutions -->
+      <div class="card" id="parametric-agricultural">
+        <div class="card-header">
+          <i class="fas fa-tractor"></i>
+          <h3>Parametric Agricultural Solutions</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Index-based insurance that pays out based on predefined triggers (e.g., rainfall, temperature) rather than actual loss assessment.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Parametric insurance covers the probability of a predefined event happening (e.g. a major hurricane or earthquake), paying out according to a predefined scheme instead of a lengthy claim adjustment process.</p>
+            <p>Unlike traditional indemnity insurance, parametric insurance pays out when a predefined event occurs as measured by a specified parameter or index (flood, hurricane, earthquake, etc.).</p>
+            <p>It offers financial protection against losses that are often hard or impossible to insure traditionally, providing faster payouts without lengthy loss adjustment procedures.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Specialty Risk Placement -->
+      <div class="card" id="specialty-risk">
+        <div class="card-header">
+          <i class="fas fa-shield-virus"></i>
+          <h3>Specialty Risk Placement</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Placement of non-traditional or unusual risks that fall outside standard insurance scopes and require specialized underwriting expertise.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Special risks refer to those risks that are non-traditional or unusual because the person or entity insured is more exposed to certain risks. These unusual risks might be attributed to the dangerous nature of the insured’s profession or industry.</p>
+            <p>As the insurance landscape evolves, new and emerging risks create gaps in traditional coverage. These require specialized underwriting and placement expertise.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <section id="data-modelling" style="background: white;">
+  <div class="container">
+    <h2>Data and Modelling</h2>
+    <p style="text-align:center; max-width:900px; margin:0 auto 3rem; color:var(--gray); font-size:1.15rem;">
+      Advanced catastrophe modelling, capital efficiency analysis, regulatory compliance support, and high-quality reinsurance data analytics to optimize your portfolio and placements.
+    </p>
+
+    <div class="cards-grid">
+
+      <!-- 1. CAT Modeling -->
+      <div class="card" id="cat-modeling">
+        <div class="card-header">
+          <i class="fas fa-chart-area"></i>
+          <h3>CAT Modeling</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Computerized simulation of thousands of plausible catastrophic events to quantify potential damages and insured losses using scientific, engineering, and statistical methods.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>A catastrophe model simulates thousands of plausible catastrophic event scenarios based on realistic parameters from meteorological history, geology, and geography. These scenarios probabilistically model future events to quantify expected damages to a portfolio using engineering approaches, then calculate insured losses by applying policy terms.</p>
+            <p>Models provide insights for risk identification, quantification, and management through a multi-disciplinary approach (science, engineering, mathematics/statistics). Evolving since the 1980s with better technology and data, they now cover non-weather risks like liability, terrorism, and cyber-attacks.</p>
+            <p><strong>Cat Model Basics:</strong> Quantify financial impact beyond historical data, incorporating latest scientific research. Estimate direct (physical damage, injuries), indirect (business interruption), and residual losses (demand surge, inflation).</p>
+            <p><strong>Core Components (Risk Triangle):</strong></p>
+            <ul style="color: black;">
+              <li><strong>Hazard:</strong> Event catalog with frequency, location, intensity, footprints, and annual probability.</li>
+              <li><strong>Vulnerability:</strong> Damage functions relating hazard intensity to expected damage based on building characteristics.</li>
+              <li><strong>Exposure:</strong> Portfolio data including location, risk details, insured values, and policy terms (deductibles, limits, reinsurance).</li>
+              <li><strong>Financial:</strong> Calculates insured losses across scenarios, aggregates to create loss probability distribution, derives AAL and EP curves.</li>
+            </ul>
+            <p><strong>Outputs:</strong> Exceedance Probability (EP) curves (aggregate or occurrence), Average Annual Loss (AAL).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Return on Risk Adjusted Capital -->
+      <div class="card" id="rorac">
+        <div class="card-header">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Return on Risk Adjusted Capital (RORAC)</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">A profitability metric that evaluates projects or investments by dividing net income by risk-weighted (or economic) capital, enabling comparison across different risk profiles.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>The return on risk-adjusted capital (RORAC) measures rate of return while accounting for capital at risk. It is widely used to compare projects, divisions, or investments with varying risk levels.</p>
+            <p><strong>Formula:</strong></p>
+            <p style="font-weight:600; text-align:center; margin:1rem 0;">
+              RORAC = Net Income / Risk-Weighted Assets
+            </p>
+            <p>Risk-weighted assets = Allocated risk capital, economic capital, or value at risk.</p>
+            <p>RORAC adjusts for maximum potential loss based on earnings volatility or future distributions, providing a risk-sensitive view of performance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. IFRS Preparedness -->
+      <div class="card" id="ifrs-preparedness">
+        <div class="card-header">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <h3>IFRS Preparedness</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Support for compliance with IFRS 17 Insurance Contracts, including aggregation, discount rates, risk adjustment, transition, and statutory reporting requirements in Kenya.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>Section 54 of the Insurance Act mandates IFRS-compliant financial statements. IFRS 17 (effective 1 January 2023) replaces IFRS 4 and sets principles for recognition, measurement, presentation, and disclosure of insurance contracts.</p>
+            <p><strong>Objective:</strong> Provide relevant, faithful representation of insurance contracts' impact on financial position, performance, and cash flows.</p>
+            <p><strong>IRA Guidance (Kenya):</strong></p>
+            <ul style="color: black;">
+              <li><strong>Level of aggregation:</strong> Portfolios by classes/subclasses per Insurance Act; discretion for similar risks managed together.</li>
+              <li><strong>Discount rates:</strong> Bottom-up or top-down approach; justify choice; risk-free rate = government bond yield curve.</li>
+              <li><strong>Risk adjustment:</strong> Disclose method and confidence level (minimum 75% if not using confidence interval).</li>
+              <li><strong>Transition:</strong> Apply from 1 January 2023; submit restated 2022 IFRS 17 statements with Q2 2023 returns.</li>
+              <li><strong>Statutory Reporting:</strong> Continue submitting statutory returns alongside IFRS 17.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Reinsurance Data Analytics -->
+      <div class="card" id="reinsurance-data-analytics">
+        <div class="card-header">
+          <i class="fas fa-database"></i>
+          <h3>Reinsurance Data Analytics</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Improving data quality to reduce reinsurance costs and avoid penalties or coverage refusal in hardening markets — including risk profiles, large losses, treaty statistics, exposure aggregates, and projections.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p>High-quality data is critical for favorable reinsurance terms. Poor data can lead to higher pricing or coverage denial.</p>
+            <p><strong>Key Data Requirements:</strong></p>
+            <ul style="color: black;">
+              <li><strong>Risk and loss profiles:</strong> Group policies/claims by sum insured bands.</li>
+              <li><strong>Large losses & CAT events:</strong> Historical large claims above threshold and CAT-affected policies (include below-deductible for inflation-adjusted analysis).</li>
+              <li><strong>Historical reinsurance experience:</strong> Treaty statistics/results (premiums ceded, commissions, recoveries) — varies by proportional vs non-proportional.</li>
+              <li><strong>Catastrophe exposure aggregates:</strong> Sum insured by peril, occupancy, coverage type, and location (postal code, CRESTA zones, lat/long for facultative).</li>
+              <li><strong>Revised & projected premiums:</strong> EPI/GNPI revisions for past years and projections for new period (proxy for exposure growth).</li>
+            </ul>
+            <p>Good data quality signals professionalism and responsiveness — leading to better reinsurance outcomes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Additional Reinsurers Information -->
+      <div class="card" id="additional-reinsurers-info">
+        <div class="card-header">
+          <i class="fas fa-info-circle"></i>
+          <h3>Additional Reinsurers Information & Challenges</h3>
+        </div>
+        <div class="card-body">
+          <p class="short-text">Other requested items (rate changes, special risks, business plans, retentions) plus common data quality challenges and improvement actions for insurers.</p>
+          <span class="read-more">Read More</span>
+          <div class="full-text">
+            <p><strong>Other Items Reinsurers May Request:</strong></p>
+            <ul style="color: black;">
+              <li>Primary rate changes (especially for CAT-exposed classes).</li>
+              <li>List of special risks requiring special acceptance.</li>
+              <li>High-level business plans.</li>
+              <li>Maximum retentions by class (non-proportional).</li>
+              <li>Current/expiring reinsurance structures.</li>
+            </ul>
+            <p><strong>Common Data Quality Challenges (especially emerging markets):</strong></p>
+            <ul style="color: black;">
+              <li>Legacy systems unable to meet evolving needs.</li>
+              <li>Lack of dedicated data resources.</li>
+              <li>Insufficient knowledge of reinsurers' data expectations.</li>
+            </ul>
+            <p><strong>Recommended Actions to Improve:</strong></p>
+            <ul style="color: black;">
+              <li>Train staff on reinsurance data needs (brokers can provide templates and awareness).</li>
+              <li>Allocate dedicated resources for data management.</li>
+              <li>Foster collaboration between IT and reinsurance teams.</li>
+            </ul>
+            <p>Insurers with strong data practices are viewed favorably and often secure better terms and capacity.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- TESTIMONIALS + PARTNERS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-head">
+       <div class="section-head reveal">
+        <h2>What Our Clients Say</h2>
+        <p>Trusted by insurers and reinsurers across Africa for our expertise, responsiveness, and market access.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">AJG Re's deep understanding of the African market and their ability to secure competitive reinsurance terms has been invaluable to our growth strategy. A truly professional team.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div>
+              <div class="author-name">James Mwangi</div>
+              <div class="author-role">Head of Reinsurance, East African Insurer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">Their data analytics capabilities transformed how we approach our treaty negotiations. We saw immediate improvements in our reinsurance pricing and capacity.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AO</div>
+            <div>
+              <div class="author-name">Amina Osei</div>
+              <div class="author-role">CFO, West Africa Insurance Group</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">The team's expertise in specialty risks — particularly energy and mining — gave us access to markets we simply couldn't reach on our own. Exceptional placement capability.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SK</div>
+            <div>
+              <div class="author-name">Samuel Kariuki</div>
+              <div class="author-role">Underwriting Director, Pan-Africa Re</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div>
+        <p class="partners-label">Market Partners &amp; Relationships</p>
+        <div class="partners-row">
+          <div class="partner-badge">Africa Re</div>
+          <div class="partner-badge">Kenya Re</div>
+          <div class="partner-badge">Lloyd's of London</div>
+          <div class="partner-badge">Swiss Re</div>
+          <div class="partner-badge">Munich Re</div>
+          <div class="partner-badge">WAICA Re</div>
+          <div class="partner-badge">ZEP-Re</div>
+          <div class="partner-badge">Hannover Re</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + TEAM + WHY US -->
+  </section>
+    <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <p>AJG Reinsurance Brokers Limited (African Joint Group) was incorporated in 2023 as a reinsurance brokerage firm to engage in reinsurance consulting for their clients — being direct insured, insurance companies, and reinsurance companies.</p>
+        <p>AJG Re comes with years of experience from the technical team and the directors who have a combined experience of over 50 years having worked in various insurance and reinsurance companies.</p>
+      </div>
+
+      <h2 id="why-us" class="section-title">Why Us</h2>
+      <div class="about-content">
+        <p>AJG Re boasts of a team that comes with a wealth of experience in the insurance and reinsurance industry. This team specializes in risk analysis, designing and placement of reinsurance and retrocession programs for both life and non-life companies, providing premium and claims recovery support, and consulting on management of existing portfolios as well as structuring capital adequacy solutions through reinsurance.</p>
+      </div>
+
+      <p id="team" ></p><br>
+      <h2 class="section-title">Our Team</h2>
+      <div class="team-grid">
+
+        <div class="team-card">
+          <img src="william_olotch.png" alt="William Olotch" class="team-img">
+          <div class="team-header">
+            <h3>William Olotch</h3>
+            <p class="title">Chairman</p>
+          </div>
+          <div class="team-bio">
+            <p class="short-bio">Mr Olotch’s fulltime working life has mainly been in the insurance industry, starting as a management trainee and rising to senior leadership roles across major Kenyan and African reinsurance entities.</p>
+            
+            
+          </div>
+        </div>
+
+        <!-- Repeat similar structure for each member -->
+
+        <div class="team-card">
+          <img src="antony_polo.png" alt="Antony Polo" class="team-img">
+          <div class="team-header">
+            <h3>Antony Polo</h3>
+            <p class="title">Chief Operating Officer</p>
+          </div>
+          <div class="team-bio">
+            <p class="short-bio">Accomplished insurance and reinsurance executive with over two decades of experience in direct broking and reinsurance broking across Africa's leading firms.</p>
+            
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="sam_okoth.png" alt="Sam Okoth" class="team-img">
+          <div class="team-header">
+            <h3>Sam Okoth</h3>
+            <p class="title">Team Member</p>
+          </div>
+          <div class="team-bio">
+            <p class="short-bio">Over 20 years of all-around insurance knowledge, with experience in underwriting, military service, and Lloyd’s of London roles.</p>
+            
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="george_otieno.png" alt="George O. Otieno" class="team-img">
+          <div class="team-header">
+            <h3>George O. Otieno</h3>
+            <p class="title">Non Executive Director</p>
+          </div>
+          <div class="team-bio">
+            <p class="short-bio">Chartered Insurer with over 40 years in insurance and reinsurance, including senior roles at Africa Re and CEO of ATI (now ATIDI).</p>
+            
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="judy_kamau.png" alt="Judy Kamau" class="team-img">
+          <div class="team-header">
+            <h3>Judy Kamau</h3>
+            <p class="title">Non Executive Director </p>
+          </div>
+          <div class="team-bio">
+            <p class="short-bio">Business leader and entrepreneur with over 10 years of experience, founder of Luxury Golden Duranta Villas, and executive in insurance investments.</p>
+            
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="francis_opondoh.png" alt="Francis Opondoh" class="team-img">
+          <div class="team-header">
+            <h3>Francis Opondoh</h3>
+            <p class="title">Executive Director</p>
+          </div>
+          <div class="social-icons" style="justify-content: center; margin: 25px 0;">
+              <a href="https://www.linkedin.com/company/ajg-reinsurance-brokers-limited" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="social-icon"
+                aria-label="AJG Reinsurance LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+              </a>
+          </div>
+          <div class="team-bio">
+            <p class="short-bio">Insurance professional since 1990 with expertise in life, medical, and micro insurance from Kenya Re and African Re.</p>
+            
+            
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background:var(--light);">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto 3rem; color:var(--gray); font-size:1.15rem;">
+        We'd love to hear from you. Fill out the form below and we'll get back to you shortly.
+      </p>
+      
+      <div id="contact-form">
+        <form action="https://formspree.io/f/xjgaaorg" method="POST">
+          <input type="hidden" name="_subject" value="New Contact Message from AJG Reinsurance Website">
+          <input type="hidden" name="_next" value="https://ajgreinsurance.com/thank-you.html">
+          
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name">
+          
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+          
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX">
+          
+          <label for="company">Company / Organization</label>
+          <input type="text" id="company" name="company" placeholder="Your company name">
+          
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" required placeholder="Reinsurance Inquiry">
+          
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>
+          
+          <input type="text" name="_gotcha" style="display:none">
+          
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scrollToTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Scroll to Top Button
+    const scrollBtn = document.getElementById('scrollToTop');
+    
+    const toggleScrollBtn = () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
+      }
+    };
+    
+    window.addEventListener('scroll', toggleScrollBtn);
+    
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Read More / Read Less functionality (improved)
+    document.querySelectorAll('.read-more').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const fullText = this.nextElementSibling;
+        const shortText = this.previousElementSibling;
+        
+        if (fullText && fullText.classList.contains('full-text')) {
+          const isVisible = fullText.style.display === 'block';
+          
+          if (!isVisible) {
+            // Show full text
+            fullText.style.display = 'block';
+            if (shortText && shortText.classList.contains('short-text')) {
+              shortText.style.display = 'none';
+            }
+            this.style.display = 'none';
+            
+            // Add Read Less button at the end of full-text
+            let readLessBtn = fullText.querySelector('.read-less-link');
+            if (!readLessBtn) {
+              readLessBtn = document.createElement('span');
+              readLessBtn.className = 'read-less-link';
+              readLessBtn.textContent = 'Read Less';
+              readLessBtn.style.cursor = 'pointer';
+              readLessBtn.style.display = 'block';
+              readLessBtn.style.marginTop = '1rem';
+              readLessBtn.style.textDecoration = 'underline';
+              readLessBtn.style.fontWeight = '700';
+              fullText.appendChild(readLessBtn);
+              
+              // Click handler for Read Less
+              readLessBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                fullText.style.display = 'none';
+                if (shortText && shortText.classList.contains('short-text')) {
+                  shortText.style.display = 'block';
+                }
+                btn.style.display = 'inline';
+                readLessBtn.remove();
+              });
+            }
+          }
+        }
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Close mobile menu if open
+          if (navLinks.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+          }
+          
+          // Close all dropdowns when a link is clicked
+          document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+        }
+      });
+    });
+    
+    // Dropdown toggle on button click
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        // Don't prevent default - let it navigate
+        const dropdown = this.nextElementSibling;
+        
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown-content').forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove('active');
+          }
+        });
+        
+        // Toggle current dropdown
+        if (dropdown && dropdown.classList.contains('dropdown-content')) {
+          dropdown.classList.toggle('active');
+        }
+      });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
+    });
+
+    // Initialize scroll button
+    toggleScrollBtn();
+  </script>
+
+  <!-- FOOTER ENHANCED -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Brand col -->
+        <div class="footer-brand">
+          <span class="logo-footer">AJG <span>Re</span></span>
+          <p>African Joint Group Reinsurance Brokers Limited — your trusted reinsurance partner across Africa and international markets.</p>
+          <div class="footer-mission">
+            Delivering expertise, transparency, and results-driven reinsurance solutions since 2023.
+          </div>
+          <div class="reg-badge"><i class="fas fa-check-circle"></i> IRA Licensed Reinsurance Broker — Kenya</div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-envelope" style="color:var(--accent); margin-right:0.5rem;"></i><a href="mailto:info@ajgreinsurance.com">info@ajgreinsurance.com</a></p>
+          <p style="margin-top:0.6rem;"><i class="fas fa-phone" style="color:var(--accent); margin-right:0.5rem;"></i><a href="tel:+254704322508">+254 704 322 508</a></p>
+          <p style="margin-top:0.6rem;"><i class="fas fa-map-marker-alt" style="color:var(--accent); margin-right:0.5rem;"></i><a href="https://maps.app.goo.gl/hu96WTLWyJjR8Sjh7" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
+          <div class="social-icons" style="margin-top:1.2rem;">
+            <a href="https://www.linkedin.com/company/ajg-reinsurance-brokers-limited/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="footer-col">
+          <h4>Our Office</h4>
+          <p>Gallant Mall, 5th Floor<br>Parklands Road, Westlands<br>P.O Box 67446 – 00200<br>Nairobi, Kenya</p>
+          <p style="margin-top:1rem; font-size:0.85rem; color:#64748b;">Mon – Fri: 8:00am – 5:00pm<br>Sat – Sun: Closed</p>
+        </div>
+
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p>&copy; 2026 AJG Reinsurance Brokers Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
